@@ -11,16 +11,21 @@
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <stdio.h>
+#include <fcntl.h>
+#include <unistd.h>
 
 char	*ft_read_and_append(int fd, char *saved_str)
 {
 	char	*temp;
 	int		bytes_read;
+	int		i; // переменная для отладочных целей
 
 	temp = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!temp)
 		return (NULL);
 	bytes_read = 1;
+	i = 0; // начальное значение для переменной i
 	while (!ft_strchr_v(saved_str, '\n') && bytes_read != 0)
 	{
 		bytes_read = read(fd, temp, BUFFER_SIZE);
@@ -31,10 +36,15 @@ char	*ft_read_and_append(int fd, char *saved_str)
 		}
 		temp[bytes_read] = '\0';
 		saved_str = ft_strjoin_v(saved_str, temp);
+		printf("Current saved_str: %s\n", saved_str); // проверка текущего состояния saved_str
+		printf("Bytes read: %d\n", bytes_read); // проверка количества прочитанных байт
+		printf("File descriptor number: %d\n", fd); // номер дескриптора
+		i++; // инкремент переменной i для отладочных целей
 	}
 	free(temp);
 	return (saved_str);
 }
+
 
 
 
