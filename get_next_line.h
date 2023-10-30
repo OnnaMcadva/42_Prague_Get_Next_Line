@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anmakaro <anmakaro@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/30 12:19:28 by anmakaro          #+#    #+#             */
+/*   Updated: 2023/10/30 14:39:42 by anmakaro         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
@@ -8,12 +22,12 @@
 #  define BUFFER_SIZE 1024
 # endif
 
-int		ft_strlen(const char *str);
-char	*ft_strchr(const char *s, int i);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_get_line_from_left_str(char *left_str);
-char	*ft_update_left_str(char *left_str);
-char	*ft_read_and_append(int fd, char *buffer, char *saved_str);
+size_t	ft_strlen_v(char *s);
+char	*ft_strchr_v(char *s, int c);
+char	*ft_strjoin_v(char *left_str, char *buff);
+char	*ft_getline_fromleftstr(char *left_str);
+char	*ft_update_leftstr(char *left_str);
+char	*ft_read_and_append(int fd, char *saved_str);
 char	*get_next_line(int fd);
 
 #endif
