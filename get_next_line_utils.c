@@ -55,7 +55,8 @@ char	*ft_strjoin_v(char *left_str, char *buff)
 	}
 	if (!left_str || !buff)
 		return (NULL);
-	str = malloc(sizeof(char) * ((ft_strlen_v(left_str) + ft_strlen_v(buff)) + 1));
+	str = malloc(sizeof(char) * ((ft_strlen_v(left_str)
+					+ ft_strlen_v(buff)) + 1));
 	if (str == NULL)
 		return (NULL);
 	i = -1;
@@ -112,7 +113,8 @@ char	*ft_update_leftstr(char *left_str)
 		free(left_str);
 		return (NULL);
 	}
-	new_left_str = (char *)malloc(sizeof(char) * (ft_strlen_v(left_str) - i + 1));
+	new_left_str = (char *)malloc(sizeof(char)
+			* (ft_strlen_v(left_str) - i + 1));
 	if (!new_left_str)
 		return (NULL);
 	i++;
