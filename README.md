@@ -5,6 +5,9 @@ Reading a line from a fd is way too tedious
 
 * This project will not only allow you to add a very convenient function to your collection, but it will also make you learn a highly interesting new concept in C programming: static variables.
 
+  ![image](https://github.com/OnnaMcadva/42_Prague_Get_Next_Line/assets/94723781/e23a7766-648d-4b8d-a02d-d5f9a8b3728d)
+
+
 ## Функция get_next_line:
 
 ## [`get_next_line`](get_next_line.c)
