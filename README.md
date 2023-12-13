@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="https://github.com/OnnaMcadva/42_Prague_Get_Next_Line/assets/94723781/d472b45d-68e4-44e2-860e-365f4df3584b" alt="ft_printf 42 project badge"/>
+</p>
+
+
 # Get_Next_Line
 Reading a line from a fd is way too tedious
 
